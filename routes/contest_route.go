@@ -1,9 +1,10 @@
 package routes
 
 import (
-    "net/http"
-    "Codechef-scraper-api/scrapers"
-    "github.com/gin-gonic/gin"
+	scraper "Codechef-scraper-api/scrapers"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func ContestRoutes(r *gin.Engine) {

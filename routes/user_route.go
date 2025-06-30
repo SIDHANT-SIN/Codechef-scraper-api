@@ -2,7 +2,7 @@ package routes
 
 import (
 	"Codechef-scraper-api/cache"
-	"Codechef-scraper-api/scrapers"
+	scraper "Codechef-scraper-api/scrapers"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

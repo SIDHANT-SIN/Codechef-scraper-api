@@ -15,6 +15,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
-
+.env
 # Go module stuff
 go.sum
