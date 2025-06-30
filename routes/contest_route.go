@@ -14,7 +14,7 @@ func ContestRoutes(r *gin.Engine) {
             c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
             return
         }
-
+        
         c.JSON(http.StatusOK, contests)
     })
 }
