@@ -3,6 +3,7 @@ package main
 import (
 	middleware "Codechef-scraper-api/middle"
 	"Codechef-scraper-api/routes"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -15,13 +16,13 @@ import (
 
 func main() {
 
-    err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %v.", err)
-	}
+	if err := godotenv.Load(); err != nil {
+        log.Printf("No .env file found or error loading it: %v. Using environment variables.", err)
+    }
 
 	rateLimitRequestsStr := os.Getenv("RATE_LIMIT_REQUESTS")
 	rateLimitWindowHoursStr := os.Getenv("RATE_LIMIT_WINDOW_HOURS")
+	port := os.Getenv("PORT")
 
 	rateLimitRequests, _ := strconv.Atoi(rateLimitRequestsStr)
 
@@ -42,7 +43,8 @@ func main() {
 	routes.ContestRoutes(r)
 	routes.SolvedRoutes(r)
 
-	if err := r.Run(":8080"); err != nil {
+	Addr := fmt.Sprintf(":%s", port)
+	if err := r.Run(Addr); err != nil { 
 		log.Fatalf("Failed to run HTTP server: %v", err)
 	}
 
