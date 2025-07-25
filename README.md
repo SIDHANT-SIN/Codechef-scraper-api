@@ -3,7 +3,7 @@
 
 ## About 
 
-The **CodeStats API** is a lightweight RESTful API designed to scrape user statistics, contest history, and solved problems from CodeChef profiles. Built with Go and the Gin framework, it provides fast, structured JSON responses for developers and competitive programming enthusiasts.
+The **CodeStats API** is a lightweight RESTful API designed to scrape user statistics and contest history from CodeChef profiles. Built with Go and the Gin framework, it provides fast, structured JSON responses for developers and competitive programming enthusiasts.
 
 </div>
 
@@ -83,7 +83,6 @@ This section provides instructions for running the API using Docker. The Docker 
 | :------- | :---------- | :--- |
 | <code>GET /user/:username</code> | Retrieve detailed profile stats for a CodeChef user | <a href="https://codechef-scraper-v1-2.onrender.com/user/tourist" target="_blank" >click here</a> |
 | <code>GET /contests/:username</code> | Fetch contest history for a user | <a href="https://codechef-scraper-v1-2.onrender.com/contests/tourist" target="_blank">click here</a> |
-| <code>GET /solved/:username</code> | Get solved problems by category | <a href="https://codechef-scraper-v1-2.onrender.com/solved/tourist" target="_blank">click here</a> |
 
 ## For user stats - 
 
