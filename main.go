@@ -16,9 +16,9 @@ import (
 
 func main() {
 
-	if err := godotenv.Load(); err != nil {
-        log.Printf("No .env file found or error loading it: %v. Using environment variables.", err)
-    }
+	// if err := godotenv.Load(); err != nil {
+    //     log.Printf("No .env file found or error loading it: %v. Using environment variables.", err)
+    // }
 
 	rateLimitRequestsStr := os.Getenv("RATE_LIMIT_REQUESTS")
 	rateLimitWindowHoursStr := os.Getenv("RATE_LIMIT_WINDOW_HOURS")
